@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
     <title>三木的个人介绍</title>
+    <link rel="icon" href="/favicon.ico" />
     <style>
       body {
         margin: 0;
@@ -30,7 +32,7 @@
         margin: 24px;
       }
       .button {
-        background-color: #4caf50; /* Green */
+        background-color: #49af84; /* Green */
         border: none;
         color: white;
         padding: 15px 32px;
@@ -99,7 +101,7 @@
       <img
         src="zhaopian.png"
         alt="zhaopian"
-        style="width: 300px; padding: 20px; margin-right: 20px"
+        style="width: 300px; height: 400px; padding: 20px; margin-right: 20px"
       />
       <!--我是三木为什么两边还有很多空间  （除去margin和pading）就换行呢-->
       <div
@@ -133,5 +135,12 @@
     >
       <p>© 2022 by Sunmu created with kwc.com</p>
     </dibulan>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
   </body>
 </html>
